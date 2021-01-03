@@ -1,0 +1,9 @@
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\bin\Debug\netstandard2.1\MVCProject.Service.deps.json
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\bin\Debug\netstandard2.1\MVCProject.Service.dll
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\bin\Debug\netstandard2.1\MVCProject.Service.pdb
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\obj\Debug\netstandard2.1\MVCProject.Service.csprojAssemblyReference.cache
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\obj\Debug\netstandard2.1\MVCProject.Service.AssemblyInfoInputs.cache
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\obj\Debug\netstandard2.1\MVCProject.Service.AssemblyInfo.cs
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\obj\Debug\netstandard2.1\MVCProject.Service.csproj.CoreCompileInputs.cache
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\obj\Debug\netstandard2.1\MVCProject.Service.dll
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\obj\Debug\netstandard2.1\MVCProject.Service.pdb
