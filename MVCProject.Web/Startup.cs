@@ -6,6 +6,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MVCProject.Models;
+using MVCProject.Models.Repository;
+using MVCProject.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +28,8 @@ namespace MVCProject.Web
         {
             services.AddControllersWithViews();
             services.AddScoped<DbContext, BaseDbContext>();
+            services.AddScoped<ServiceWrapper>();
+            services.AddScoped<RepositoryWrapper>();
             services.AddDbContext<BaseDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
         }
 

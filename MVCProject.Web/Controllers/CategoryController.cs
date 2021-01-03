@@ -14,5 +14,11 @@ namespace MVCProject.Web.Controllers
         public CategoryController(BaseDbContext db, ServiceWrapper service) : base(db, service)
         {
         }
+
+        public ActionResult Index()
+        {
+            var result = _service.categoryService.GetAll();
+            return View(result);
+        }
     }
 }

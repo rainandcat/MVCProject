@@ -1,0 +1,46 @@
+﻿@model List<MVCProject.Models.CategoriesModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>
+                編號
+            </td>
+            <td>
+                名稱
+            </td>
+            <td>
+                形容
+            </td>
+            <td>
+                圖片
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var data in this.Model)
+        {
+            <tr>
+                <td>
+                    @data.CategoryID
+                </td>
+                <td>
+                    @data.CategoryName
+                </td>
+                <td>
+                    @data.Description
+                </td>
+                <td>
+                    @data.Picture
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
