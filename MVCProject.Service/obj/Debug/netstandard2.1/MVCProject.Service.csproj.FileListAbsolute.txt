@@ -7,3 +7,6 @@ C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\obj\Debug\netstand
 C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\obj\Debug\netstandard2.1\MVCProject.Service.csproj.CoreCompileInputs.cache
 C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\obj\Debug\netstandard2.1\MVCProject.Service.dll
 C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\obj\Debug\netstandard2.1\MVCProject.Service.pdb
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\bin\Debug\netstandard2.1\MVCProject.Models.dll
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\bin\Debug\netstandard2.1\MVCProject.Models.pdb
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Service\obj\Debug\netstandard2.1\MVCProject.Service.csproj.CopyComplete

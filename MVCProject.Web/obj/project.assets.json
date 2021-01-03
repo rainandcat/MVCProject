@@ -1496,6 +1496,21 @@
         "runtime": {
           "bin/placeholder/MVCProject.Models.dll": {}
         }
+      },
+      "MVCProject.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "MVCProject.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVCProject.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVCProject.Service.dll": {}
+        }
       }
     }
   },
@@ -5713,11 +5728,17 @@
       "type": "project",
       "path": "../MVCProject.Models/MVCProject.Models.csproj",
       "msbuildProject": "../MVCProject.Models/MVCProject.Models.csproj"
+    },
+    "MVCProject.Service/1.0.0": {
+      "type": "project",
+      "path": "../MVCProject.Service/MVCProject.Service.csproj",
+      "msbuildProject": "../MVCProject.Service/MVCProject.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "MVCProject.Models >= 1.0.0",
+      "MVCProject.Service >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.1"
     ]
@@ -5751,6 +5772,9 @@
           "projectReferences": {
             "C:\\Users\\ssee1\\Desktop\\Data\\MVC\\MVCProject\\MVCProject.Models\\MVCProject.Models.csproj": {
               "projectPath": "C:\\Users\\ssee1\\Desktop\\Data\\MVC\\MVCProject\\MVCProject.Models\\MVCProject.Models.csproj"
+            },
+            "C:\\Users\\ssee1\\Desktop\\Data\\MVC\\MVCProject\\MVCProject.Service\\MVCProject.Service.csproj": {
+              "projectPath": "C:\\Users\\ssee1\\Desktop\\Data\\MVC\\MVCProject\\MVCProject.Service\\MVCProject.Service.csproj"
             }
           }
         }

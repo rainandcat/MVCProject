@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MVCProject.Models\MVCProject.Models.csproj" />
+    <ProjectReference Include="..\MVCProject.Service\MVCProject.Service.csproj" />
   </ItemGroup>
 
 </Project>

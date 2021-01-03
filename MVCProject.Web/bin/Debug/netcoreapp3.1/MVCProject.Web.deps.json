@@ -25,6 +25,7 @@
       "MVCProject.Web/1.0.0": {
         "dependencies": {
           "MVCProject.Models": "1.0.0",
+          "MVCProject.Service": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -1373,6 +1374,19 @@
         },
         "compile": {
           "MVCProject.Models.dll": {}
+        }
+      },
+      "MVCProject.Service/1.0.0": {
+        "dependencies": {
+          "MVCProject.Models": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.1"
+        },
+        "runtime": {
+          "MVCProject.Service.dll": {}
+        },
+        "compile": {
+          "MVCProject.Service.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -3662,6 +3676,11 @@
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
     "MVCProject.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MVCProject.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

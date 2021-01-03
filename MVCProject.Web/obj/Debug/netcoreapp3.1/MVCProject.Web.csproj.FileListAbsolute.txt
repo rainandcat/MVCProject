@@ -111,3 +111,5 @@ C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Web\bin\Debug\netcoreapp3.
 C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\MVCProject.Web.Views.pdb
 C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\MVCProject.Web.csproj.CopyComplete
 C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\MVCProject.Web.genruntimeconfig.cache
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Web\bin\Debug\netcoreapp3.1\MVCProject.Service.dll
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Web\bin\Debug\netcoreapp3.1\MVCProject.Service.pdb

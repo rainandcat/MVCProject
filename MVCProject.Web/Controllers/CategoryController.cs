@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MVCProject.Models;
+using MVCProject.Service;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace MVCProject.Web.Controllers
 {
     public class CategoryController : BaseController
     {
-        public CategoryController(BaseDbContext db) : base(db)
+        public CategoryController(BaseDbContext db, ServiceWrapper service) : base(db, service)
         {
         }
     }
