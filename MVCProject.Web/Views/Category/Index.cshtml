@@ -37,7 +37,7 @@
                     @data.Description
                 </td>
                 <td>
-                    @data.Picture
+                    <img src="@Url.Action("GetImage","Category",new { id =data.CategoryID})" />
                 </td>
             </tr>
 
