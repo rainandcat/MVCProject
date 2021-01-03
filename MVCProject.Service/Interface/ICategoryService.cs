@@ -1,4 +1,5 @@
 ﻿using MVCProject.Models;
+using MVCProject.Service.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -7,16 +8,16 @@ namespace MVCProject.Service.Interface
 {
     public interface ICategoryService
     {
-        IResult Create(CategoriesModel instance);
+        IResult Create(CategoriesViewModel instance);
 
-        IResult Update(CategoriesModel instance);
+        IResult Update(CategoriesViewModel instance);
 
         IResult Delete(int categoryID);
 
         bool IsExists(int categoryID);
 
-        CategoriesModel GetByID(int categoryID);
+        CategoriesViewModel GetByID(int categoryID);
 
-        IEnumerable<CategoriesModel> GetAll();
+        IEnumerable<CategoriesViewModel> GetAll();
     }
 }

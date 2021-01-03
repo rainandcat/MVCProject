@@ -1,6 +1,7 @@
 ﻿using MVCProject.Models;
 using MVCProject.Models.Repository;
 using MVCProject.Service.Interface;
+using MVCProject.Service.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace MVCProject.Service
         public CategoryService(BaseDbContext db, RepositoryWrapper repository) : base(db, repository)
         {
         }
-        public IResult Create(CategoriesModel instance)
+        public IResult Create(CategoriesViewModel instance)
         {
             if (instance == null)
             {
@@ -23,8 +24,13 @@ namespace MVCProject.Service
             IResult result = new Result(false);
             try
             {
-                instance.CategoryID = 0;
-                _repository.categories.Create(instance);
+                var category = new CategoriesModel();
+                category.CategoryID = 0;
+                category.CategoryName = instance.CategoryName;
+                category.Description = instance.Description;
+                category.Picture = instance.Picture;
+
+                _repository.categories.Create(category);
                 result.Success = true;
             }
             catch (Exception ex)
@@ -34,7 +40,7 @@ namespace MVCProject.Service
             return result;
         }
 
-        public IResult Update(CategoriesModel instance)
+        public IResult Update(CategoriesViewModel instance)
         {
             if (instance == null)
             {
@@ -44,7 +50,13 @@ namespace MVCProject.Service
             IResult result = new Result(false);
             try
             {
-                _repository.categories.Update(instance);
+                var category = new CategoriesModel();
+                category.CategoryID = 0;
+                category.CategoryName = instance.CategoryName;
+                category.Description = instance.Description;
+                category.Picture = instance.Picture;
+
+                _repository.categories.Update(category);
                 result.Success = true;
             }
             catch (Exception ex)
@@ -65,7 +77,7 @@ namespace MVCProject.Service
 
             try
             {
-                var instance = this.GetByID(categoryID);
+                var instance = _repository.categories.Get(x => x.CategoryID == categoryID);
                 _repository.categories.Delete(instance);
                 result.Success = true;
             }
@@ -81,14 +93,30 @@ namespace MVCProject.Service
             return _repository.categories.GetAll().Any(x => x.CategoryID == categoryID);
         }
 
-        public CategoriesModel GetByID(int categoryID)
+        public CategoriesViewModel GetByID(int categoryID)
         {
-            return _repository.categories.Get(x => x.CategoryID == categoryID);
+            var category = _repository.categories.Get(x => x.CategoryID == categoryID);
+            var result = new CategoriesViewModel();
+            result.CategoryID = category.CategoryID;
+            result.CategoryName = category.CategoryName;
+            result.Description = category.Description;
+            result.Picture = category.Picture;
+            return result;
         }
 
-        public IEnumerable<CategoriesModel> GetAll()
+        public IEnumerable<CategoriesViewModel> GetAll()
         {
-            return _repository.categories.GetAll();
+            var categories= _repository.categories.GetAll();
+            var result = new List<CategoriesViewModel>();
+            foreach (var item in categories) {
+                var tmp = new CategoriesViewModel();
+                tmp.CategoryID = item.CategoryID;
+                tmp.CategoryName = item.CategoryName;
+                tmp.Description = item.Description;
+                tmp.Picture = item.Picture;
+                result.Add(tmp);
+            }
+            return result;
         }
     }
 }
