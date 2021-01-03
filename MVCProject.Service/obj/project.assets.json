@@ -2033,6 +2033,20 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "MVCProject.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.1"
+        },
+        "compile": {
+          "bin/placeholder/MVCProject.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MVCProject.Models.dll": {}
+        }
       }
     }
   },
@@ -7145,10 +7159,16 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "MVCProject.Models/1.0.0": {
+      "type": "project",
+      "path": "../MVCProject.Models/MVCProject.Models.csproj",
+      "msbuildProject": "../MVCProject.Models/MVCProject.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
+      "MVCProject.Models >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.1",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.1"
     ]
@@ -7179,7 +7199,11 @@
       "frameworks": {
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ssee1\\Desktop\\Data\\MVC\\MVCProject\\MVCProject.Models\\MVCProject.Models.csproj": {
+              "projectPath": "C:\\Users\\ssee1\\Desktop\\Data\\MVC\\MVCProject\\MVCProject.Models\\MVCProject.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
