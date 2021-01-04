@@ -38,5 +38,8 @@ namespace MVCProject.Models
 
         [Column("Discontinued")]
         public Boolean Discontinued { get; set; }
+
+        [ForeignKey("CategoryID")]
+        public CategoriesModel Category { get; set; }
     }
 }

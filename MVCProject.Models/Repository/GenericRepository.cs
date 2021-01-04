@@ -85,9 +85,14 @@ namespace MVCProject.Models.Repository
             return this._db.Set<TEntity>().FirstOrDefault(predicate);
         }
 
-        public List<TEntity> GetAll()
+        public IQueryable<TEntity> GetAll()
         {
-            return this._db.Set<TEntity>().ToList();
+            return this._db.Set<TEntity>().AsQueryable();
+        }
+
+        public IQueryable<TEntity> GetAllInclude(string instance)
+        {
+            return this._db.Set<TEntity>().AsQueryable().Include(instance);
         }
     }
 }

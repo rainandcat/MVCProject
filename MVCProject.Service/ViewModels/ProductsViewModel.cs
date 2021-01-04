@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCProject.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,6 +15,8 @@ namespace MVCProject.Service.ViewModels
 
         public int CategoryID { get; set; }
 
+        public string CategoryName { get; set; }
+
         public string QuantityPerUnit { get; set; }
 
         public Decimal UnitPrice { get; set; }
@@ -25,5 +28,7 @@ namespace MVCProject.Service.ViewModels
         public Int16 ReorderLevel { get; set; }
 
         public Boolean Discontinued { get; set; }
+
+        
     }
 }

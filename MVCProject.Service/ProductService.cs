@@ -115,6 +115,7 @@ namespace MVCProject.Service
             result.ProductName = product.ProductName;
             result.SupplierID = product.SupplierID;
             result.CategoryID = product.CategoryID;
+            tmp.CategoryName = item.Category.CategoryName;
             result.QuantityPerUnit = product.QuantityPerUnit;
             result.UnitPrice = product.UnitPrice;
             result.UnitsInStock = product.UnitsInStock;
@@ -127,7 +128,7 @@ namespace MVCProject.Service
 
         public IEnumerable<ProductsViewModel> GetAll()
         {
-            var products = _repository.products.GetAll();
+            var products = _repository.products.GetAllInclude("Category");
             var result = new List<ProductsViewModel>();
             foreach (var item in products)
             {
@@ -136,6 +137,7 @@ namespace MVCProject.Service
                 tmp.ProductName = item.ProductName;
                 tmp.SupplierID = item.SupplierID;
                 tmp.CategoryID = item.CategoryID;
+                tmp.CategoryName = item.Category.CategoryName;
                 tmp.QuantityPerUnit = item.QuantityPerUnit;
                 tmp.UnitPrice = item.UnitPrice;
                 tmp.UnitsInStock = item.UnitsInStock;
