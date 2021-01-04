@@ -75,5 +75,15 @@ namespace MVCProject.Web.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult Delete(int id)
+        {
+            var result = _service.productService.Delete(id);
+
+            if (result.Success) TempData["ResultMessage"] = String.Format("成功刪除");
+            else TempData["ResultMessage"] = String.Format("失敗刪除");
+
+            return RedirectToAction("Index");
+        }
     }
 }

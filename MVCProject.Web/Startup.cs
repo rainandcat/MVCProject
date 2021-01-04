@@ -27,6 +27,7 @@ namespace MVCProject.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddMvc();
             services.AddScoped<DbContext, BaseDbContext>();
             services.AddScoped<ServiceWrapper>();
             services.AddScoped<RepositoryWrapper>();

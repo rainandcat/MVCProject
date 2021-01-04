@@ -50,41 +50,44 @@
     <tbody>
         @foreach (var data in this.Model)
         {
-            <tr>
-                <td>
-                    @data.ProductID
-                </td>
-                <td>
-                    @data.ProductName
-                </td>
-                <td>
-                    @data.SupplierID
-                </td>
-                <td>
-                    @data.CategoryName
-                </td>
-                <td>
-                    @data.QuantityPerUnit
-                </td>
-                <td>
-                    @data.UnitPrice
-                </td>
-                <td>
-                    @data.UnitsInStock
-                </td>
-                <td>
-                    @data.UnitsOnOrder
-                </td>
-                <td>
-                    @data.ReorderLevel
-                </td>
-                <td>
-                    @data.Discontinued
-                </td>
-                <td>
-                    @Html.ActionLink("編輯", "Edit", new { id = data.ProductID })
-                </td>
-            </tr>
+        <tr>
+            <td>
+                @data.ProductID
+            </td>
+            <td>
+                @data.ProductName
+            </td>
+            <td>
+                @data.SupplierID
+            </td>
+            <td>
+                @data.CategoryName
+            </td>
+            <td>
+                @data.QuantityPerUnit
+            </td>
+            <td>
+                @data.UnitPrice
+            </td>
+            <td>
+                @data.UnitsInStock
+            </td>
+            <td>
+                @data.UnitsOnOrder
+            </td>
+            <td>
+                @data.ReorderLevel
+            </td>
+            <td>
+                @data.Discontinued
+            </td>
+            <td>
+                @Html.ActionLink("編輯", "Edit", new { id = data.ProductID })
+            </td>
+            <td>
+                @Html.ActionLink("刪除", "Delete", new { id = data.ProductID })
+            </td>
+        </tr>
 
         }
     </tbody>
