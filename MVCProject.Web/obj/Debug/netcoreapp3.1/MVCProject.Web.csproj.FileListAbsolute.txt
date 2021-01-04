@@ -344,3 +344,4 @@ C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\M
 C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\MVCProject.Web.dll
 C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\MVCProject.Web.pdb
 C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
+C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\Create.cshtml.g.cs

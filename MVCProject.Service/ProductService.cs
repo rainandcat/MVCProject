@@ -27,7 +27,6 @@ namespace MVCProject.Service
             {
                 var product = new ProductsModel();
                 product.ProductID = 0;
-                product.ProductID = instance.ProductID;
                 product.ProductName = instance.ProductName;
                 product.SupplierID = instance.SupplierID;
                 product.CategoryID = instance.CategoryID;
@@ -115,7 +114,7 @@ namespace MVCProject.Service
             result.ProductName = product.ProductName;
             result.SupplierID = product.SupplierID;
             result.CategoryID = product.CategoryID;
-            tmp.CategoryName = item.Category.CategoryName;
+            result.CategoryName = product.Category.CategoryName;
             result.QuantityPerUnit = product.QuantityPerUnit;
             result.UnitPrice = product.UnitPrice;
             result.UnitsInStock = product.UnitsInStock;
