@@ -30,15 +30,15 @@ namespace MVCProject.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(ProductsViewModel item)
+        public ActionResult Create(ProductsViewModel instance)
         {
             if (!ModelState.IsValid)
             {
                 ViewBag.ResultMessage = "輸入資料錯誤";
-                return View(item);
+                return View(instance);
             }
-            _service.productService.Create(item);
-            TempData["ResultMessage"] = String.Format("[{0}]成功建立", item.ProductName);
+            _service.productService.Create(instance);
+            TempData["ResultMessage"] = String.Format("[{0}]成功建立", instance.ProductName);
             return RedirectToAction("Index");
         }
 
@@ -61,17 +61,17 @@ namespace MVCProject.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult Edit(ProductsViewModel item)
+        public ActionResult Edit(ProductsViewModel instance)
         {
             if (!ModelState.IsValid)
             {
                 ViewBag.ResultMessage = "輸入資料錯誤";
-                return View(item);
+                return View(instance);
             }
 
-            var result = _service.productService.Update(item);
-            if (result.Success) TempData["ResultMessage"] = String.Format("[{0}]成功修改", item.ProductName);
-            else TempData["ResultMessage"] = String.Format("[{0}]失敗修改", item.ProductName);
+            var result = _service.productService.Update(instance);
+            if (result.Success) TempData["ResultMessage"] = String.Format("[{0}]成功修改", instance.ProductName);
+            else TempData["ResultMessage"] = String.Format("[{0}]失敗修改", instance.ProductName);
 
             return RedirectToAction("Index");
         }

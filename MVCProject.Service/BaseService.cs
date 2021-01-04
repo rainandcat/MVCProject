@@ -1,4 +1,5 @@
-﻿using MVCProject.Models;
+﻿using AutoMapper;
+using MVCProject.Models;
 using MVCProject.Models.Repository;
 using System;
 using System.Collections.Generic;
@@ -10,11 +11,13 @@ namespace MVCProject.Service
     {
         protected readonly BaseDbContext _db;
         protected readonly RepositoryWrapper _repository;
+        protected readonly IMapper _mapper;
 
-        public BaseService(BaseDbContext db, RepositoryWrapper repository)
+        public BaseService(BaseDbContext db, RepositoryWrapper repository, IMapper mapper)
         {
             this._db = db;
             this._repository = repository;
+            this._mapper = mapper;
         }
     }
 }

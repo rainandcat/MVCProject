@@ -1,4 +1,5 @@
-﻿using MVCProject.Models;
+﻿using AutoMapper;
+using MVCProject.Models;
 using MVCProject.Models.Repository;
 using MVCProject.Service.Interface;
 using MVCProject.Service.ViewModels;
@@ -11,7 +12,7 @@ namespace MVCProject.Service
 {
     public class ProductService: BaseService, IProductService
     {
-        public ProductService(BaseDbContext db, RepositoryWrapper repository) : base(db, repository)
+        public ProductService(BaseDbContext db, RepositoryWrapper repository, IMapper mapper) : base(db, repository, mapper)
         {
         }
 
@@ -25,17 +26,8 @@ namespace MVCProject.Service
             IResult result = new Result(false);
             try
             {
-                var product = new ProductsModel();
+                var product = _mapper.Map<ProductsViewModel, ProductsModel>(instance);
                 product.ProductID = 0;
-                product.ProductName = instance.ProductName;
-                product.SupplierID = instance.SupplierID;
-                product.CategoryID = instance.CategoryID;
-                product.QuantityPerUnit = instance.QuantityPerUnit;
-                product.UnitPrice = instance.UnitPrice;
-                product.UnitsInStock = instance.UnitsInStock;
-                product.UnitsOnOrder = instance.UnitsOnOrder;
-                product.ReorderLevel = instance.ReorderLevel;
-                product.Discontinued = instance.Discontinued;
 
                 _repository.products.Create(product);
                 result.Success = true;
@@ -57,17 +49,7 @@ namespace MVCProject.Service
             IResult result = new Result(false);
             try
             {
-                var product = new ProductsModel();
-                product.ProductID = instance.ProductID;
-                product.ProductName = instance.ProductName;
-                product.SupplierID = instance.SupplierID;
-                product.CategoryID = instance.CategoryID;
-                product.QuantityPerUnit = instance.QuantityPerUnit;
-                product.UnitPrice = instance.UnitPrice;
-                product.UnitsInStock = instance.UnitsInStock;
-                product.UnitsOnOrder = instance.UnitsOnOrder;
-                product.ReorderLevel = instance.ReorderLevel;
-                product.Discontinued = instance.Discontinued;
+                var product = _mapper.Map<ProductsViewModel, ProductsModel>(instance);
 
                 _repository.products.Update(product);
                 result.Success = true;
@@ -109,42 +91,13 @@ namespace MVCProject.Service
         public ProductsViewModel GetByID(int productID)
         {
             var product = _repository.products.Get(x => x.ProductID == productID);
-            var result = new ProductsViewModel();
-            result.ProductID = product.ProductID;
-            result.ProductName = product.ProductName;
-            result.SupplierID = product.SupplierID;
-            result.CategoryID = product.CategoryID;
-            result.QuantityPerUnit = product.QuantityPerUnit;
-            result.UnitPrice = product.UnitPrice;
-            result.UnitsInStock = product.UnitsInStock;
-            result.UnitsOnOrder = product.UnitsOnOrder;
-            result.ReorderLevel = product.ReorderLevel;
-            result.Discontinued = product.Discontinued;
-
-            return result;
+            return _mapper.Map<ProductsModel, ProductsViewModel>(product);
         }
 
         public IEnumerable<ProductsViewModel> GetAll()
         {
             var products = _repository.products.GetAllInclude("Category");
-            var result = new List<ProductsViewModel>();
-            foreach (var item in products)
-            {
-                var tmp = new ProductsViewModel();
-                tmp.ProductID = item.ProductID;
-                tmp.ProductName = item.ProductName;
-                tmp.SupplierID = item.SupplierID;
-                tmp.CategoryID = item.CategoryID;
-                tmp.CategoryName = item.Category.CategoryName;
-                tmp.QuantityPerUnit = item.QuantityPerUnit;
-                tmp.UnitPrice = item.UnitPrice;
-                tmp.UnitsInStock = item.UnitsInStock;
-                tmp.UnitsOnOrder = item.UnitsOnOrder;
-                tmp.ReorderLevel = item.ReorderLevel;
-                tmp.Discontinued = item.Discontinued;
-                result.Add(tmp);
-            }
-            return result;
+            return _mapper.Map<IEnumerable<ProductsModel>, IEnumerable<ProductsViewModel>>(products);
         }
     }
 }

@@ -31,14 +31,14 @@ namespace MVCProject.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody]ProductsViewModel item)
+        public IActionResult Post([FromBody]ProductsViewModel instance)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var result= _service.productService.Create(item);
+            var result= _service.productService.Create(instance);
             if (!result.Success)
             {
                 string ErrorMsg = "新增失敗";
@@ -50,11 +50,11 @@ namespace MVCProject.Web.Controllers
         }
 
         [HttpPut]
-        public IActionResult Put([FromBody]ProductsViewModel item)
+        public IActionResult Put([FromBody]ProductsViewModel instance)
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
-            var result = _service.productService.Update(item);
+            var result = _service.productService.Update(instance);
             if (!result.Success)
             {
                 string ErrorMsg = "修改失敗";

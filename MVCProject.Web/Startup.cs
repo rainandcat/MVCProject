@@ -1,3 +1,4 @@
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,6 +29,7 @@ namespace MVCProject.Web
         {
             services.AddControllersWithViews();
             services.AddMvc();
+            services.AddAutoMapper(typeof(Startup));
             services.AddScoped<DbContext, BaseDbContext>();
             services.AddScoped<ServiceWrapper>();
             services.AddScoped<RepositoryWrapper>();

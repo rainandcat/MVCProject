@@ -321,7 +321,6 @@ C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\bin\Debug\netcoreapp3.1\M
 C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\MVCProject.Web.csprojAssemblyReference.cache
 C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\staticwebassets\MVCProject.Web.StaticWebAssets.Manifest.cache
 C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\staticwebassets\MVCProject.Web.StaticWebAssets.xml
-C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\MVCProject.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\MVCProject.Web.RazorAssemblyInfo.cache
 C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\MVCProject.Web.RazorAssemblyInfo.cs
 C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\MVCProject.Web.AssemblyInfoInputs.cache
@@ -346,3 +345,11 @@ C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\M
 C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs
 C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\Create.cshtml.g.cs
 C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.cs
+C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\1810010\Desktop\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\MVCProject.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Web\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Web\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\Create.cshtml.g.cs
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\Edit.cshtml.g.cs
+C:\Users\ssee1\Desktop\Data\MVC\MVCProject\MVCProject.Web\obj\Debug\netcoreapp3.1\Razor\Views\Product\Index.cshtml.g.cs

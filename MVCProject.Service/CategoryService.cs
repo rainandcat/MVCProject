@@ -1,4 +1,5 @@
-﻿using MVCProject.Models;
+﻿using AutoMapper;
+using MVCProject.Models;
 using MVCProject.Models.Repository;
 using MVCProject.Service.Interface;
 using MVCProject.Service.ViewModels;
@@ -11,7 +12,7 @@ namespace MVCProject.Service
 {
     public class CategoryService: BaseService,ICategoryService
     {
-        public CategoryService(BaseDbContext db, RepositoryWrapper repository) : base(db, repository)
+        public CategoryService(BaseDbContext db, RepositoryWrapper repository, IMapper mapper) : base(db, repository, mapper)
         {
         }
         public IResult Create(CategoriesViewModel instance)
