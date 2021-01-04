@@ -1,0 +1,46 @@
+﻿@model List<MVCProject.Service.ViewModels.CategoriesViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Categories</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>
+                CategoryID
+            </td>
+            <td>
+                CategoryName
+            </td>
+            <td>
+                Description
+            </td>
+            <td>
+                Picture
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var data in this.Model)
+        {
+            <tr>
+                <td>
+                    @data.CategoryID
+                </td>
+                <td>
+                    @data.CategoryName
+                </td>
+                <td>
+                    @data.Description
+                </td>
+                <td>
+                    <img src="@Url.Action("GetImage","Category",new { id =data.CategoryID})" />
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>

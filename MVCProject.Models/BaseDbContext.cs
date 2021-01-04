@@ -10,5 +10,7 @@ namespace MVCProject.Models
         public BaseDbContext(DbContextOptions<BaseDbContext> options) : base(options)
         {
         }
+        public DbSet<CategoriesModel> Categories { get; set; }
+        public DbSet<ProductsModel> Products { get; set; }
     }
 }
