@@ -52,5 +52,28 @@ namespace MVCProject.Web.Controllers
 
             ViewBag.SelectList = selectList;
         }
+
+        public ActionResult Edit(int id)
+        {
+            var result = _service.productService.GetByID(id);
+            this.CategoeriesList();
+            return View(result);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(ProductsViewModel item)
+        {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.ResultMessage = "輸入資料錯誤";
+                return View(item);
+            }
+
+            var result = _service.productService.Update(item);
+            if (result.Success) TempData["ResultMessage"] = String.Format("[{0}]成功修改", item.ProductName);
+            else TempData["ResultMessage"] = String.Format("[{0}]失敗修改", item.ProductName);
+
+            return RedirectToAction("Index");
+        }
     }
 }

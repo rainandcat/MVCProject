@@ -114,7 +114,6 @@ namespace MVCProject.Service
             result.ProductName = product.ProductName;
             result.SupplierID = product.SupplierID;
             result.CategoryID = product.CategoryID;
-            result.CategoryName = product.Category.CategoryName;
             result.QuantityPerUnit = product.QuantityPerUnit;
             result.UnitPrice = product.UnitPrice;
             result.UnitsInStock = product.UnitsInStock;

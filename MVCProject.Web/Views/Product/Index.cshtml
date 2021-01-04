@@ -81,6 +81,9 @@
                 <td>
                     @data.Discontinued
                 </td>
+                <td>
+                    @Html.ActionLink("編輯", "Edit", new { id = data.ProductID })
+                </td>
             </tr>
 
         }
