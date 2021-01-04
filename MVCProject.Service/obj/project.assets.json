@@ -7174,19 +7174,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ssee1\\.nuget\\packages\\": {}
+    "C:\\Users\\1810010\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ssee1\\Desktop\\Data\\MVC\\MVCProject\\MVCProject.Service\\MVCProject.Service.csproj",
+      "projectUniqueName": "C:\\Users\\1810010\\Desktop\\MVC\\MVCProject\\MVCProject.Service\\MVCProject.Service.csproj",
       "projectName": "MVCProject.Service",
-      "projectPath": "C:\\Users\\ssee1\\Desktop\\Data\\MVC\\MVCProject\\MVCProject.Service\\MVCProject.Service.csproj",
-      "packagesPath": "C:\\Users\\ssee1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ssee1\\Desktop\\Data\\MVC\\MVCProject\\MVCProject.Service\\obj\\",
+      "projectPath": "C:\\Users\\1810010\\Desktop\\MVC\\MVCProject\\MVCProject.Service\\MVCProject.Service.csproj",
+      "packagesPath": "C:\\Users\\1810010\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\1810010\\Desktop\\MVC\\MVCProject\\MVCProject.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ssee1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\1810010\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7194,14 +7194,14 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "http://192.168.99.95:8081/api/v3/index.json": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "projectReferences": {
-            "C:\\Users\\ssee1\\Desktop\\Data\\MVC\\MVCProject\\MVCProject.Models\\MVCProject.Models.csproj": {
-              "projectPath": "C:\\Users\\ssee1\\Desktop\\Data\\MVC\\MVCProject\\MVCProject.Models\\MVCProject.Models.csproj"
+            "C:\\Users\\1810010\\Desktop\\MVC\\MVCProject\\MVCProject.Models\\MVCProject.Models.csproj": {
+              "projectPath": "C:\\Users\\1810010\\Desktop\\MVC\\MVCProject\\MVCProject.Models\\MVCProject.Models.csproj"
             }
           }
         }
@@ -7214,7 +7214,6 @@
     },
     "frameworks": {
       "netstandard2.1": {
-        "targetAlias": "netstandard2.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -7240,7 +7239,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

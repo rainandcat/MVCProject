@@ -51,7 +51,7 @@ namespace MVCProject.Service
             try
             {
                 var category = new CategoriesModel();
-                category.CategoryID = 0;
+                category.CategoryID = instance.CategoryID;
                 category.CategoryName = instance.CategoryName;
                 category.Description = instance.Description;
                 category.Picture = instance.Picture;
