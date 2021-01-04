@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using MVCProject.Models;
 using MVCProject.Service;
 
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace MVCProject.Web.Controllers
 {
@@ -16,6 +15,10 @@ namespace MVCProject.Web.Controllers
         {
         }
 
-       
+        public ActionResult Index()
+        {
+            var result = _service.productService.GetAll();
+            return View(result);
+        }
     }
 }

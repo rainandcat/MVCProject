@@ -1,0 +1,83 @@
+﻿@model List<MVCProject.Service.ViewModels.ProductsViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <h1>Products</h1>
+    <input type="button" value="新增" onclick="window.location='@Url.Action("Create", "Product")'" />
+    <table class="table">
+        <thead>
+            <tr>
+                <td>
+                    ProductID
+                </td>
+                <td>
+                    ProductName
+                </td>
+                <td>
+                    SupplierID
+                </td>
+                <td>
+                    CategoryID
+                </td>
+                <td>
+                    QuantityPerUnit
+                </td>
+                <td>
+                    UnitPrice
+                </td>
+                <td>
+                    UnitsInStock
+                </td>
+                <td>
+                    UnitsOnOrder
+                </td>
+                <td>
+                    ReorderLevel
+                </td>
+                <td>
+                    Discontinued
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var data in this.Model)
+            {
+            <tr>
+                <td>
+                    @data.ProductID
+                </td>
+                <td>
+                    @data.ProductName
+                </td>
+                <td>
+                    @data.SupplierID
+                </td>
+                <td>
+                    @data.CategoryID
+                </td>
+                <td>
+                    @data.QuantityPerUnit
+                </td>
+                <td>
+                    @data.UnitPrice
+                </td>
+                <td>
+                    @data.UnitsInStock
+                </td>
+                <td>
+                    @data.UnitsOnOrder
+                </td>
+                <td>
+                    @data.ReorderLevel
+                </td>
+                <td>
+                    @data.Discontinued
+                </td>
+            </tr>
+
+            }
+        </tbody>
+    </table>
+
